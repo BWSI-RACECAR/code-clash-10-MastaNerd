@@ -54,13 +54,10 @@ class Solution:
 
             for i in range(0, num_actions**num_players):
                 possActions[i] = ()
-                for i in range(0,num_players):      
-                    
-                 
-
-
-            #TODO: Write code below to return a dictionary with the solution to the prompt.
-            pass
+                for j in range(0,num_players):
+                    possActions[i] += (i // (num_actions **j) % num_actions)
+                possActions[possActions[i]] = i
+            return possActions
     
 def main():
     input1 = input()
