@@ -55,7 +55,7 @@ class Solution:
             for i in range(0, num_actions**num_players):
                 possActions[i] = ()
                 for j in range(0,num_players):
-                    possActions[i] += (i // (num_actions **j) % num_actions)
+                    possActions[i] += (i // (num_actions **j) % num_actions,)
                 possActions[possActions[i]] = i
             return possActions
     
